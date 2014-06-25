@@ -1,0 +1,450 @@
+/* -------------------------------------------------------------------------- */
+/* Default CSS stylesheet
+
+/* -------------------------------------------------------------------------- */
+/* General
+========================================================================== */
+a {
+  border: none;
+  background: transparent;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+small {
+  bottom: 1.1ex;
+  font-size: 1ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: baseline;
+}
+/* Mixins
+   ========================================================================== */
+.center-by-margin {
+  margin: 0 auto;
+  display: block;
+}
+.text-shadow {
+  color: #FFFFFF;
+  text-shadow: 0px 1px 1px #000000;
+}
+/* Uncollapse container of floated elements. */
+.clear-children:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+/* -------------------------------------------------------------------------- */
+/* Generic styles */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 12px;
+  line-height: 1.2rem;
+  background: #E7E7E7;
+  margin: 0px;
+}
+a img {
+  border: none;
+}
+.btn {
+  cursor: pointer;
+}
+.disabled {
+  opacity: .2;
+  cursor: default !important;
+}
+.hidden {
+  display: none !important;
+}
+sup {
+  font-size: 10px;
+  position: relative;
+  top: 2px;
+}
+p {
+  margin: 0;
+}
+.table {
+  display: table;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.table-cell-middle {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+input[type='text'],
+button {
+  border-radius: 4px;
+  border: 1px solid #aaa;
+}
+input[type='text'] {
+  width: 300px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
+button {
+  background-color: #eee;
+}
+input[type='checkbox'] + label {
+  padding-left: 5px;
+}
+/* Copy inputs */
+#copy-container:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+#copy-container #copy-inputs,
+#copy-container button {
+  float: left;
+  height: 70px;
+}
+#copy-container #copy-inputs #short-copy input {
+  margin-bottom: 0;
+}
+#copy-container button {
+  margin-left: 10px;
+  padding: 10px 10px;
+  width: 80px;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 16px;
+  line-height: 1.6rem;
+}
+/* Banner filter form styles */
+#shortCopyFilter {
+  margin-bottom: 10px;
+}
+/* End filter styles */
+/* Banner grid and grid item styles */
+.grid-item {
+  margin-bottom: 20px;
+}
+.grid-item .banner-container {
+  border: 1px dashed orange;
+  height: 100%;
+  width: 100%;
+}
+.grid-item .banner-container h1,
+.grid-item .banner-container h2,
+.grid-item .banner-container h3,
+.grid-item .banner-container h4,
+.grid-item .banner-container h5,
+.grid-item .banner-container h6 {
+  margin: 0;
+}
+.grid-item .banner-container .content-container,
+.grid-item .banner-container footer {
+  border: 1px solid blue;
+}
+.grid-item .banner-container .content-container {
+  text-align: center;
+  padding: 0 10px;
+}
+.grid-item .banner-container .content-container h1 {
+  font-size: 50px;
+  font-size: 5rem;
+  line-height: 50px;
+  line-height: 5rem;
+}
+.grid-item .banner-container .content-container h2 {
+  font-size: 42px;
+  font-size: 4.2rem;
+  line-height: 42px;
+  line-height: 4.2rem;
+}
+.grid-item .banner-container .content-container h3 {
+  font-size: 34px;
+  font-size: 3.4rem;
+  line-height: 34px;
+  line-height: 3.4rem;
+}
+.grid-item .banner-container .content-container h4 {
+  font-size: 26px;
+  font-size: 2.6rem;
+  line-height: 26px;
+  line-height: 2.6rem;
+}
+.grid-item .banner-container .content-container h5 {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+}
+.grid-item .banner-container .content-container h6 {
+  font-size: 10px;
+  font-size: 1rem;
+  line-height: 10px;
+  line-height: 1rem;
+}
+.grid-item .tools {
+  width: 300px;
+}
+.grid-item .tools:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.grid-item .tools label {
+  padding: 0 5px;
+}
+.grid-item .tools > div {
+  float: left;
+  margin-right: 10px;
+}
+.grid-item .tools > div:last-child {
+  margin-right: 0;
+}
+.grid-item .tools .code-revealer {
+  float: right;
+}
+.grid-item .tools .code-revealer button {
+  font-size: 11px;
+  font-size: 1.1rem;
+  line-height: 11px;
+  line-height: 1.1rem;
+  margin-top: 2px;
+  padding: 5px 4px;
+}
+.grid-item .tools select {
+  margin-top: 2px;
+}
+/* General Portrait banners */
+.portrait .content-container,
+.portrait footer {
+  width: 100%;
+}
+.portrait .content-container {
+  height: 80%;
+  border-bottom: none !important;
+}
+.portrait footer {
+  height: 20%;
+}
+/* General Landscape banners */
+.landscape .content-container,
+.landscape footer {
+  height: 100%;
+}
+.landscape .content-container {
+  float: left;
+  width: 80%;
+  border-right: none !important;
+}
+.landscape footer {
+  float: left;
+  width: 20%;
+}
+/* Banner specific */
+#banner-300x250 .banner-container h1 {
+  font-size: 50px;
+  font-size: 5rem;
+  line-height: 50px;
+  line-height: 5rem;
+}
+#banner-300x250 .banner-container h2 {
+  font-size: 42px;
+  font-size: 4.2rem;
+  line-height: 42px;
+  line-height: 4.2rem;
+}
+#banner-300x250 .banner-container h3 {
+  font-size: 34px;
+  font-size: 3.4rem;
+  line-height: 34px;
+  line-height: 3.4rem;
+}
+#banner-300x250 .banner-container h4 {
+  font-size: 26px;
+  font-size: 2.6rem;
+  line-height: 26px;
+  line-height: 2.6rem;
+}
+#banner-300x250 .banner-container h5 {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+}
+#banner-300x250 .banner-container h6 {
+  font-size: 10px;
+  font-size: 1rem;
+  line-height: 10px;
+  line-height: 1rem;
+}
+#banner-728x90 .banner-container h1 {
+  font-size: 40px;
+  font-size: 4rem;
+  line-height: 40px;
+  line-height: 4rem;
+}
+#banner-728x90 .banner-container h2 {
+  font-size: 35px;
+  font-size: 3.5rem;
+  line-height: 35px;
+  line-height: 3.5rem;
+}
+#banner-728x90 .banner-container h3 {
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 30px;
+  line-height: 3rem;
+}
+#banner-728x90 .banner-container h4 {
+  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 25px;
+  line-height: 2.5rem;
+}
+#banner-728x90 .banner-container h5 {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 20px;
+  line-height: 2rem;
+}
+#banner-728x90 .banner-container h6 {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 15px;
+  line-height: 1.5rem;
+}
+#banner-300x50 .banner-container h1 {
+  font-size: 21px;
+  font-size: 2.1rem;
+  line-height: 21px;
+  line-height: 2.1rem;
+}
+#banner-300x50 .banner-container h2 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 16px;
+  line-height: 1.6rem;
+}
+#banner-300x50 .banner-container h3 {
+  font-size: 11px;
+  font-size: 1.1rem;
+  line-height: 11px;
+  line-height: 1.1rem;
+}
+#banner-300x50 .banner-container h4 {
+  font-size: 6px;
+  font-size: 0.6rem;
+  line-height: 6px;
+  line-height: 0.6rem;
+}
+#banner-300x50 .banner-container h5 {
+  font-size: 1px;
+  font-size: 0.1rem;
+  line-height: 1px;
+  line-height: 0.1rem;
+}
+#banner-300x50 .banner-container h6 {
+  font-size: -4px;
+  font-size: -0.4rem;
+  line-height: -4px;
+  line-height: -0.4rem;
+}
+#banner-300x600 .banner-container h1 {
+  font-size: 70px;
+  font-size: 7rem;
+  line-height: 70px;
+  line-height: 7rem;
+}
+#banner-300x600 .banner-container h2 {
+  font-size: 62px;
+  font-size: 6.2rem;
+  line-height: 62px;
+  line-height: 6.2rem;
+}
+#banner-300x600 .banner-container h3 {
+  font-size: 54px;
+  font-size: 5.4rem;
+  line-height: 54px;
+  line-height: 5.4rem;
+}
+#banner-300x600 .banner-container h4 {
+  font-size: 46px;
+  font-size: 4.6rem;
+  line-height: 46px;
+  line-height: 4.6rem;
+}
+#banner-300x600 .banner-container h5 {
+  font-size: 38px;
+  font-size: 3.8rem;
+  line-height: 38px;
+  line-height: 3.8rem;
+}
+#banner-300x600 .banner-container h6 {
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 30px;
+  line-height: 3rem;
+}
+/* End banner grid styles */
+/* Overlay */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(170, 170, 170, 0.9);
+}
+#overlay > div {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 60%;
+  height: 400px;
+  margin: 0 -30%;
+}
+#overlay > div header:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+#overlay > div header h2 {
+  float: left;
+  margin-top: 0;
+}
+#overlay > div header a {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 14px;
+  line-height: 1.4rem;
+  margin-top: 20px;
+  float: right;
+  color: #333;
+  text-decoration: underline;
+}
+#overlay > div #textarea-copy {
+  width: 100%;
+  height: 100%;
+}
+#overlay > div #textarea-copy textarea {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 16px;
+  line-height: 1.6rem;
+  line-height: 20px;
+  line-height: 2.0rem;
+  width: 100%;
+  height: 50%;
+  max-height: 100%;
+  padding: 20px;
+  border-radius: 4px;
+  border: none;
+}

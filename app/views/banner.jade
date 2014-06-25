@@ -1,0 +1,42 @@
+//-div(class='inner', style='width:{{ data.width }}px; height:{{ data.height }}px;')
+//-    div(class='banner-container {{ data.orientation }}')
+//-        div(class='content-container')
+//-            //-div(ng-if='isFlexiBanner() || isLongBanner()', class='table', ng-show='isLongSelected()')
+//-            //-    h3(class='table-cell-middle copy-text') {{ longCopy }}
+//-            //-
+//-            //-div(ng-if='isFlexiBanner() || isShortBanner()', class='table', ng-show='isShortSelected()')
+//-            //-    h3(class='table-cell-middle copy-text') {{ shortCopy }}
+//-
+//-            div(class='table')
+//-                h3(class='table-cell-middle copy-text') {{ copy }}
+//-
+//-        footer
+//-            div(class='table')
+//-                p(class='table-cell-middle')
+//-
+//-div(class='outer')
+//-    //-div(ng-if='$parent.isFlexiBanner(data)', ng-click='click()')
+//-    div(ng-if='fx(data)', ng-click='click()')
+//-        input(type='radio', id='long-{{ data.name }}', name='show-copy-{{ data.name }}', ng-model='data.selected', value='long')
+//-        label(for='long-{{ data.name }}') Long
+//-
+//-        input(type='radio', id='short-{{ data.name }}', name='show-copy-{{ data.name }}', ng-model='data.selected', value='short')
+//-        label(for='short-{{ data.name }}') Short
+//-
+//-    div(class='markup-switcher')
+//-        select(ng-model='selectedContentContainer')
+//-            option(value='h1') h1
+//-            option(value='h2') h2
+//-            option(value='h3') h3
+//-            option(value='h4') h4
+//-            option(value='h5') h5
+//-            option(value='h6') h6
+
+div(class='banner-container {{ banner.orientation }}', style='width:{{ banner.width }}px; height:{{ banner.height }}px;')
+    div(class='content-container')
+        div(class='table copy-text')
+            //-h3(class='table-cell-middle', ng-bind-html='copy[banner.selected].sanitize()')
+
+    footer
+        div(class='table')
+            p(class='table-cell-middle')

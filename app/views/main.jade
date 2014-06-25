@@ -1,0 +1,40 @@
+h1 Copy Text Preview
+form(id='copy-container')
+    h2 Text To Preview
+    div(id='copy-inputs')
+        div(id='long-copy', class='copy-input-container')
+            input(type='text', placeholder='Long copy (can be text or HTML)', ng-model='copy.long.text')
+
+        div(id='short-copy', class='copy-input-container')
+            input(type='text', placeholder='Short copy (can be text or HTML)', ng-model='copy.short.text')
+
+    div(class='code-revealer', type='all', data='filteredBanners', selector-prefix='#banner-', overlay-contents='overlayContents')
+
+form(id='filters')
+    h2 Filters
+    div(id='filters-container')
+        div(id='nameFilter')
+            input(type='text', placeholder='Filter by name (WxH)', ng-model='userFilterQuery')
+
+        div(id='longCopyFilter')
+            input(type='checkbox', id='checkbox-long-copy', ng-model='copy.long.bannersVisible', ng-checked='{{ copy.long.bannersVisible }}', ng-change='setVisibleCopy("long", copy.long.bannersVisible)')
+            label Long copy banners
+
+        div(id='shortCopyFilter')
+            input(type='checkbox', id='checkbox-long-copy', ng-model='copy.short.bannersVisible', ng-checked='{{ copy.short.bannersVisible }}', ng-change='setVisibleCopy("short", copy.short.bannersVisible)')
+            label Short copy banners
+
+div(ng-repeat='banner in filteredBanners = (banners | nameFilter:userFilterQuery | copySizeFilter:copy.long.bannersVisible:copy.short.bannersVisible)',
+    id='banner-{{ banner.name }}', class='grid-item')
+
+    banner
+
+    div(class='tools')
+        div(class='markup-switcher', tag='banner.containerElement')
+
+        div(ng-if='isFlexiBanner(banner)')
+            ng-include(src='"views/copy-toggler.html"')
+
+        div(class='code-revealer', selector='#banner-{{ banner.name }}', name='{{ banner.name }}', overlay-contents='$parent.overlayContents')
+
+div(id='overlay', class='hidden overlay', contents='overlayContents')

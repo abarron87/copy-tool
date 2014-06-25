@@ -1,0 +1,353 @@
+/* -------------------------------------------------------------------------- */
+/* Default CSS stylesheet
+
+/* -------------------------------------------------------------------------- */
+
+/* General
+========================================================================== */
+a {
+    border: none;
+    background: transparent;
+    text-decoration: none;
+
+    &:active,
+    &:hover {
+        outline: 0;
+    }
+}
+
+small {
+    bottom: 1.1ex;
+    font-size: 1ex;
+    height: 0;
+    line-height: 1;
+    position: relative;
+    vertical-align: baseline;
+}
+
+/* Mixins
+   ========================================================================== */
+.font-size-init() {
+    font-size: 62.5%;
+}
+
+.font-size(@px) {
+    font-size: unit(@px, px);
+    font-size: unit(@px/10, rem);
+
+    line-height: unit(@px, px);
+    line-height: unit(@px/10, rem);
+}
+
+.center-by-margin {
+    margin: 0 auto;
+    display: block;
+}
+
+.text-shadow {
+    color: #FFFFFF;
+    text-shadow: 0px 1px 1px #000000;
+}
+
+.background-image(@file-name) {
+    background: url('../img/@{file-name}') no-repeat;
+}
+
+.headings-font-size(@h1, @multiple: 8) {
+    h1 { .font-size(@h1); }
+    h2 { .font-size(@h1 - (@multiple * 1)); }
+    h3 { .font-size(@h1 - (@multiple * 2)); }
+    h4 { .font-size(@h1 - (@multiple * 3)); }
+    h5 { .font-size(@h1 - (@multiple * 4)); }
+    h6 { .font-size(@h1 - (@multiple * 5)); }
+}
+
+
+/* Uncollapse container of floated elements. */
+.clear-children {
+    &:after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Generic styles */
+html {
+    .font-size-init;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    .font-size(12);
+
+    background: #E7E7E7;
+    margin: 0px;
+}
+
+a img {
+    border: none;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.disabled {
+    opacity: .2;
+    cursor: default !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+sup {
+    font-size: 10px;
+    position: relative;
+    top: 2px;
+}
+
+p {
+    margin: 0;
+}
+
+.table {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.table-cell-middle {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+
+input[type='text'],
+button {
+    border-radius: 4px;
+    border: 1px solid #aaa;
+}
+
+input[type='text'] {
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #eee;
+}
+
+input[type='checkbox'] + label {
+    padding-left: 5px;
+}
+
+/* Copy inputs */
+#copy-container {
+    .clear-children;
+
+    #copy-inputs,
+    button {
+        float: left;
+        height: 70px;
+    }
+
+    #copy-inputs {
+
+        #short-copy input {
+            margin-bottom: 0;
+        }
+    }
+
+    button {
+        margin-left: 10px;
+        padding: 10px 10px;
+        width: 80px;
+        .font-size(16);
+    }
+}
+
+/* Banner filter form styles */
+#shortCopyFilter {
+    margin-bottom: 10px;
+}
+/* End filter styles */
+
+/* Banner grid and grid item styles */
+.grid-item {
+    margin-bottom: 20px;
+
+    .banner-container {
+        border: 1px dashed orange;
+        height: 100%;
+        width: 100%;
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+        }
+
+        .content-container,
+        footer {
+            border: 1px solid blue;
+        }
+
+        .content-container {
+            text-align: center;
+            padding: 0 10px;
+
+            .headings-font-size(50);
+        }
+
+        footer {
+
+        }
+    }
+
+    .tools {
+        .clear-children;
+
+        width: 300px;
+
+        label {
+            padding: 0 5px;
+        }
+
+        > div {
+            float: left;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .code-revealer {
+            float: right;
+
+            button {
+                .font-size(11);
+                margin-top: 2px;
+                padding: 5px 4px;
+            }
+        }
+
+        select {
+            margin-top: 2px;
+        }
+    }
+
+}
+
+/* General Portrait banners */
+.portrait {
+    .content-container,
+    footer {
+        width: 100%;
+    }
+
+    .content-container {
+        height: 80%;
+        border-bottom: none !important;
+    }
+
+    footer {
+        height: 20%;
+    }
+}
+
+/* General Landscape banners */
+.landscape {
+    .content-container,
+    footer {
+        height: 100%;
+    }
+
+    .content-container {
+        float: left;
+        width: 80%;
+        border-right: none !important;
+    }
+
+    footer {
+        float: left;
+        width: 20%;
+    }
+}
+
+/* Banner specific */
+#banner-300x250 .banner-container {
+    .headings-font-size(50);
+}
+
+#banner-728x90 .banner-container {
+    .headings-font-size(40, 5);
+}
+
+#banner-300x50 .banner-container {
+    .headings-font-size(21, 5);
+}
+
+#banner-300x600 .banner-container {
+    .headings-font-size(70);
+}
+/* End banner grid styles */
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(170, 170, 170, 0.9);
+
+    > div {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        width: 60%;
+        height: 400px;
+        margin: 0 -30%;
+
+        header {
+            .clear-children;
+
+            h2 {
+                float: left;
+                margin-top: 0;
+            }
+
+            a {
+                .font-size(14);
+                margin-top: 20px;
+                float: right;
+                color: #333;
+                text-decoration: underline;
+            }
+        }
+
+        #textarea-copy {
+            width: 100%;
+            height: 100%;
+
+            textarea {
+                .font-size(16);
+                line-height: 20px;
+                line-height: 2.0rem;
+                width: 100%;
+                height: 50%;
+                max-height: 100%;
+                padding: 20px;
+                border-radius: 4px;
+                border: none;
+            }
+        }
+    }
+}
