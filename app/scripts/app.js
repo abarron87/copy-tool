@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name copyTextProjectApp
+ * @name bannerCopyToolApp
  * @description
- * # copyTextProjectApp
+ * # bannerCopyToolApp
  *
  * Main module of the application.
  */
 angular
-  .module('copyTextProjectApp', [
+  .module('bannerCopyToolApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize'

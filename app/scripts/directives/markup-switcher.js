@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc directive
- * @name copyTextProjectApp.directive:markupSwitcher
+ * @name bannerCopyToolApp.directive:markupSwitcher
  * @description
  * # markupSwitcher
  */
-angular.module('copyTextProjectApp')
+angular.module('bannerCopyToolApp')
     .directive('markupSwitcher', [function () {
         return {
             restrict: 'C',

@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc directive
- * @name copyTextProjectApp.directive:codeRevealer
+ * @name bannerCopyToolApp.directive:codeRevealer
  * @description
  * # codeRevealer
  */
-angular.module('copyTextProjectApp')
+angular.module('bannerCopyToolApp')
     .directive('codeRevealer', ['$sce', function($sce){
         return {
             scope: {

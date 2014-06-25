@@ -2,17 +2,15 @@
 
 /**
  * @ngdoc filter
- * @name copyTextProjectApp.filter:copySizeFilter
+ * @name bannerCopyToolApp.filter:copySizeFilter
  * @function
  * @description
  * # copySizeFilter
- * Filter in the copyTextProjectApp.
+ * Filter in the bannerCopyToolApp.
  */
-angular.module('copyTextProjectApp')
+angular.module('bannerCopyToolApp')
     .filter('copySizeFilter', function () {
         return function(banners, longCopy, shortCopy) {
-//            console.log('copySizeFilter::', arguments);
-
             var filtered = [];
 
             if(longCopy && shortCopy){

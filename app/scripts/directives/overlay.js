@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc directive
- * @name copyTextProjectApp.directive:overlay
+ * @name bannerCopyToolApp.directive:overlay
  * @description
  * # overlay
  */
-angular.module('copyTextProjectApp')
+angular.module('bannerCopyToolApp')
     .directive('overlay', function () {
         return {
             scope: {

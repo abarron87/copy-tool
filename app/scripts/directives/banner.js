@@ -14,49 +14,12 @@ if (!String.prototype.supplant) {
 
 /**
  * @ngdoc directive
- * @name copyTextProjectApp.directive:banner
+ * @name bannerCopyToolApp.directive:banner
  * @description Directive responsible for representing a single banner. Displays copy text.
  * Reacts to changes to the selected heading tags. Shares scope with MainCtrl so controller can
  * be responsible for banners.
  */
-//angular.module('copyTextProjectApp')
-//    .directive('banner', ['$compile', '$interpolate', function ($compile, $interpolate) {
-//        var templateStr = '<{tag} ng-if="isFlexiBanner() || isLongBanner()" class="table-cell-middle copy-text" ng-show="isLongSelected()">{{ longCopy }}</{tag}><{tag} ng-if="isFlexiBanner() || isShortBanner()" class="table-cell-middle copy-text" ng-show="isShortSelected()">{{ shortCopy }}</{tag}>';
-//
-//        return {
-//            scope: {
-//                data: '=',
-//                copy: '@',
-//                fx: '&'
-//            },
-//            templateUrl: '/views/banner.html',
-//            transclude: true,
-//            restrict: 'A',
-//            controller: function($scope, $element, $attrs){
-//                $scope.selectedContentContainer = 'h3';
-//
-//                $scope.switchMarkup = function(){
-//                    var copyContainer = $element.find('.copy-text').parent();
-//
-//                    copyContainer.html(templateStr.supplant({ tag: $scope.selectedContentContainer }));
-//
-//                    $compile(copyContainer.contents())($scope);
-//                };
-//            },
-//            link: function(scope, element, attrs) {
-//                scope.$watch('selectedContentContainer', function(newVal, oldVal){
-//                    if(oldVal !== newVal) {
-//                        var copyContainer = element.find('.copy-text').parent();
-//
-//                        copyContainer.html(templateStr.supplant({ tag: newVal }));
-//                        $compile(copyContainer.contents())(scope);
-//                    }
-//                });
-//            }
-//        };
-//    }]);
-
-angular.module('copyTextProjectApp')
+angular.module('bannerCopyToolApp')
     .directive('banner', ['$interpolate', '$compile', function($interpolate, $compile) {
         return {
             restrict: 'E',

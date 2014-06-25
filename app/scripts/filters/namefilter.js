@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc filter
- * @name copyTextProjectApp.filter:nameFilter
+ * @name bannerCopyToolApp.filter:nameFilter
  * @function
  * @description
  * # nameFilter
- * Filter in the copyTextProjectApp.
+ * Filter in the bannerCopyToolApp.
  */
-angular.module('copyTextProjectApp')
+angular.module('bannerCopyToolApp')
     .filter('nameFilter', function () {
         return function (banners, name) {
             var filtered = [];

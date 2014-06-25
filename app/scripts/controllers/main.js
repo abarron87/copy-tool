@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name copyTextProjectApp.controller:MainCtrl
+ * @name bannerCopyToolApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the copyTextProjectApp
+ * Controller of the bannerCopyToolApp
  */
-angular.module('copyTextProjectApp')
+angular.module('bannerCopyToolApp')
     .controller('MainCtrl', ['$scope', '$sce', 'banners', function ($scope, $sce, banners) {
         // Set up some on load properties for copy text.
         // Sanitize returns user-entered HTML instead of text stripped from HTML.

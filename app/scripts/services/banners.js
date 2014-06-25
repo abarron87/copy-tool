@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc service
- * @name copyTextProjectApp.banners
+ * @name bannerCopyToolApp.banners
  * @description
  * # banners
- * Factory in the copyTextProjectApp.
+ * Factory in the bannerCopyToolApp.
  */
-angular.module('copyTextProjectApp')
+angular.module('bannerCopyToolApp')
     .factory('banners', function () {
         // Service logic
         // ...
