@@ -1,7 +1,11 @@
 {
   "name": "copytextproject",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "morgan": "~1.5.3",
+    "gzippo": "~0.2.0",
+    "express": "~4.12.4"
+  },
   "devDependencies": {
     "grunt-cli": "^0.1.13",
     "grunt": "^0.4.1",
