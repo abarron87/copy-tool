@@ -1,1 +1,1 @@
-
+web: grunt heroku:production
