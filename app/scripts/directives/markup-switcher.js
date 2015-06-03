@@ -13,16 +13,6 @@ angular.module('bannerCopyToolApp')
             scope: {
                 tag: '='
             },
-            templateUrl: '/views/markup-switcher.html',
-            link: function(scope, element, attrs) {
-//                scope.$watch('selectedContentContainer', function(newVal, oldVal){
-//                    if(oldVal !== newVal) {
-//                        var copyContainer = element.find('.copy-text').parent();
-//
-//                        copyContainer.html(templateStr.supplant({ tag: newVal }));
-//                        $compile(copyContainer.contents())(scope);
-//                    }
-//                });
-            }
+            templateUrl: '/views/markup-switcher.html'
         };
     }]);

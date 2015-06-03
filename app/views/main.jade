@@ -1,4 +1,4 @@
-h1 Copy Text Preview
+h1 Text Preview
 form(id='copy-container')
     h2 Text To Preview
     div(id='copy-inputs')
@@ -18,11 +18,11 @@ form(id='filters')
 
         div(id='longCopyFilter')
             input(type='checkbox', id='checkbox-long-copy', ng-model='copy.long.bannersVisible', ng-checked='{{ copy.long.bannersVisible }}', ng-change='setVisibleCopy("long", copy.long.bannersVisible)')
-            label Long copy banners
+            label(for='checkbox-long-copy') Long copy banners
 
         div(id='shortCopyFilter')
-            input(type='checkbox', id='checkbox-long-copy', ng-model='copy.short.bannersVisible', ng-checked='{{ copy.short.bannersVisible }}', ng-change='setVisibleCopy("short", copy.short.bannersVisible)')
-            label Short copy banners
+            input(type='checkbox', id='checkbox-short-copy', ng-model='copy.short.bannersVisible', ng-checked='{{ copy.short.bannersVisible }}', ng-change='setVisibleCopy("short", copy.short.bannersVisible)')
+            label(for='checkbox-short-copy') Short copy banners
 
 div(ng-repeat='banner in filteredBanners = (banners | nameFilter:userFilterQuery | copySizeFilter:copy.long.bannersVisible:copy.short.bannersVisible)',
     id='banner-{{ banner.name }}', class='grid-item')

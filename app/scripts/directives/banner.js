@@ -25,8 +25,8 @@ angular.module('bannerCopyToolApp')
             restrict: 'E',
             replace: true,
             templateUrl: '/views/banner.html',
-            link: function(scope, element, attrs) {
-                scope.$watch('banner.containerElement', function(newVal, oldVal){
+            link: function(scope, element) {
+                scope.$watch('banner.containerElement', function(){
                     // Use tag prop for readability in below template.
                     // Cannot just use $compile as {{ tag }} are not HTML elements when they get added to the DOM.
                     // Need to interpolate the expression first which outputs a <h1> etc tag. Then recompile it with

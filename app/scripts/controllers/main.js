@@ -36,7 +36,7 @@ angular.module('bannerCopyToolApp')
             short: angular.extend({}, copyProps, { text: 'The <em>qck</em> <span style="color:brown;">brwn</span> <b>fx</b> jmps <span style="position:relative;top:-10px;">vr</span> th <span style="letter-spacing:2px;">lzy</span> dg' })
         };
 
-//        $scope.filteredBanners = [];
+        $scope.filteredBanners = [];
 
         // Get banners from banners factory.
         $scope.banners = banners.get();
@@ -81,7 +81,7 @@ angular.module('bannerCopyToolApp')
         // Set visible copy for the given banner.
         // Only show short if user has not selected to show banners than support long copy.
         // Long copy then acts as default (reflected in the radio button toggle)
-        $scope.setVisibleCopy = function(type){
+        $scope.setVisibleCopy = function(){
             var lVisible = $scope.copy.long.bannersVisible,
                 sVisible = $scope.copy.short.bannersVisible;
 

@@ -39,7 +39,7 @@ angular.module('bannerCopyToolApp')
                 });
 
                 $('body').keyup(function(e){
-                    if(e.keyCode == 27 && (!(element.hasClass('hidden')))){
+                    if(e.keyCode === 27 && (!(element.hasClass('hidden')))){
                         toggle();
                     }
 
